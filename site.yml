@@ -3,8 +3,14 @@
   tasks:
     - name: Print ansible_os_family
       debug: var=ansible_os_family
+    - name: Print test will fail
+      debug: msg="Test will fail"
+      when: test_fails is defined
+    - name: Print test doens't fail
+      debug: msg="Test will succeed"
+      when: test_fails is not defined
     - name: Hello World
       assert:
         that:
+          - "test_fails is not defined"
           - "ansible_os_family == 'Debian'"
-          - "my_var == true"
