@@ -1,0 +1,8 @@
+- name: Big Playbook of Fun
+  hosts: all
+  tasks:
+    - name: Hello World
+      assert:
+        that:
+          - "ansible_os_family == 'Ubuntu'"
+          - "my_var == true"
