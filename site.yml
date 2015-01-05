@@ -1,6 +1,8 @@
 - name: Big Playbook of Fun
   hosts: all
   tasks:
+    - name: Print ansible_os_family
+      debug: var=ansible_os_family
     - name: Hello World
       assert:
         that:
