@@ -6,5 +6,5 @@
     - name: Hello World
       assert:
         that:
-          - "ansible_os_family == 'Ubuntu'"
+          - "ansible_os_family == 'Debian'"
           - "my_var == true"
