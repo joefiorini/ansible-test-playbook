@@ -12,5 +12,5 @@
     - name: Hello World
       assert:
         that:
-          - "test_fails is not defined"
+          - "test_fails is not defined or test_fails == 'false'"
           - "ansible_os_family == 'Debian'"
