@@ -1,0 +1,10 @@
+---
+
+- hosts: all
+  vars:
+    fail: true
+
+  tasks:
+    - fail: msg="This task intentionally failing by default"
+      when: fail
+
